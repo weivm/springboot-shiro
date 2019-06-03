@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"><head>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+<body>
+
+<div class="login-container">
+    <h1>登录</h1>
+
+
+
+    <form th:action="@{/login}" method="post" id="loginForm">
+        <div>
+            <input type="text" name="username" id="username" class="username" placeholder="用户名" />
+        </div>
+        <div>
+            <input type="password" name="password" id="password" class="password" placeholder="密码"  />
+        </div>
+        <button id="submit" type="submit">登 录</button>
+    </form>
+
+    <a th:href="@{/user/toregister}">
+        <button type="button" class="register-tis">还有没有账号？</button>
+    </a>
+
+</div>
+
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/common.js}"></script>
+<!--背景图片自动更换-->
+<script th:src="@{/js/supersized.3.2.7.min.js}"></script>
+<script th:src="@{/js/supersized-init.js}"></script>
+<!--表单验证-->
+<script th:src="@{/js/jquery.validate.min.js?var1.14.0}"></script>
+
+</body>
+</html>

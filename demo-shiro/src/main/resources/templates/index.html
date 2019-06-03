@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>测试首页</title>
+</head>
+<body>
+<div shiro:Permission="user:add">增加页面:<a th:href="@{/add}">增加页面</a></div>
+<div shiro:Permission="user:update">修改页面:<a th:href="@{/update}">修改页面</a></div>
+<div shiro:Permission="role:select">角色查询:<a th:href="@{/role}">角色查询</a></div>
+</body>
+</html>
